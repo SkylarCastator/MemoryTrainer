@@ -1,0 +1,5 @@
+MemoryTrainer/Library/
+*.csproj
+*.sln
+MemoryTrainer/.vs/
+MemoryTrainer/Temp/

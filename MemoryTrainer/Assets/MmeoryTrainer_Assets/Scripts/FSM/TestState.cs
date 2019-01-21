@@ -6,7 +6,7 @@ public class TestState : StateBase
 {
     public TestState(MemoryTrainerStateMachine stateMachine) : base(stateMachine)
     {
-
+        stateMachine.mainMenuComponent.EnableTestSlideScreen();
     }
 
     public override void OnStateEnter()
@@ -16,7 +16,8 @@ public class TestState : StateBase
 
     public override void Tick()
     {
-
+        stateMachine.trainingSlideTimer += Time.deltaTime;
+        stateMachine.mainMenuComponent.SetStudySlideTimerText(((int)stateMachine.trainingSlideTimer).ToString());
     }
 
     public override void OnStateExit()

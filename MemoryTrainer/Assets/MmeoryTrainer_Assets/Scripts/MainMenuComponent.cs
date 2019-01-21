@@ -14,6 +14,7 @@ public class MainMenuComponent : MonoBehaviour
     public GameObject mainMenuObject;
     public GameObject trainingSlideObject;
     public GameObject resultsMenuObject;
+    public GameObject testMenuObject;
 
 	public void DisableMenus()
     {
@@ -21,6 +22,7 @@ public class MainMenuComponent : MonoBehaviour
         mainMenuObject.SetActive(false);
         trainingSlideObject.SetActive(false);
         resultsMenuObject.SetActive(false);
+        testMenuObject.SetActive(false);
     }
 
     public void EnableSplashScreen()
@@ -33,6 +35,12 @@ public class MainMenuComponent : MonoBehaviour
     {
         DisableMenus();
         trainingSlideObject.SetActive(true);
+    }
+
+    public void EnableTestSlideScreen()
+    {
+        DisableMenus();
+        testMenuObject.SetActive(true);
     }
 
     public void EnableMainMenuScene()

@@ -8,7 +8,10 @@ public class MemoryTrainerStateMachine : MonoBehaviour {
     public MainMenuComponent mainMenuComponent;
     public string numberList { private set; get;}
     private int playerLevel = 0;
-    private float trainingTimerLength;
+
+    public float trainingTimerLength = 600;
+    public float trainingSlideTimer = 0;
+    public float testSlideTimer = 0;
 
     void Start ()
     {

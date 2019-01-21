@@ -45,9 +45,9 @@ public class MemoryTrainerStateMachine : MonoBehaviour {
             for (int j = 0; j < 3; j++)
             {
                 int randomValue = Random.Range(0, 99);
-                if (randomValue == 0)
+                if (randomValue < 10)
                 {
-                    numberList += "00";
+                    numberList += "0" + randomValue;
                 }
                 else
                 {

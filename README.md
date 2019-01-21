@@ -1,4 +1,4 @@
-# MemoryTrainer
+# MemoryTrainer 2019
 Memory exercises using PAO systems for memory palaces
 ![Memory](https://artofmemory.com/files/loci-system_0.png)
 </br>

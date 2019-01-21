@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class MainMenuComponent : MonoBehaviour
 {
     public MemoryTrainerStateMachine stateMachine;
-    public Text trainingTimerText;
-    public Text slideTimerText;
-    public Text studyText;
+    public Text[] trainingTimerText;
+    public Text[] studyTimerText;
+    public Text[] testTimerText;
+    public Text[] studyText;
     public Text[] levelText;
     public GameObject splashScreenObject;
     public GameObject mainMenuObject;
@@ -57,12 +58,26 @@ public class MainMenuComponent : MonoBehaviour
 
     public void SetStudyContentText(string content)
     {
-        studyText.text = content;
+        foreach (Text text in studyText)
+        {
+            text.text = content;
+        }
     }
 
     public void SetStudySlideTimerText(string content)
     {
-        slideTimerText.text = content;
+        foreach (Text text in studyTimerText)
+        {
+            text.text = content;
+        }
+    }
+
+    public void SetTestSlideTimerText(string content)
+    {
+        foreach (Text text in testTimerText)
+        {
+            text.text = content;
+        }
     }
 
     public void ChangeLevelButtonPressed(int value)
@@ -83,6 +98,11 @@ public class MainMenuComponent : MonoBehaviour
     public void SubmitButtonPressed()
     {
         stateMachine.SetState(new ResultState(stateMachine));
+    }
+
+    public void ExitButtonPressed()
+    {
+        stateMachine.SetState(new MainMenuState(stateMachine));
     }
 
     public void SetLevelText(int level)

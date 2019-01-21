@@ -16,8 +16,8 @@ public class TestState : StateBase
 
     public override void Tick()
     {
-        stateMachine.trainingSlideTimer += Time.deltaTime;
-        stateMachine.mainMenuComponent.SetStudySlideTimerText(((int)stateMachine.trainingSlideTimer).ToString());
+        stateMachine.testSlideTimer += Time.deltaTime;
+        stateMachine.mainMenuComponent.SetTestSlideTimerText(((int)stateMachine.testSlideTimer).ToString());
     }
 
     public override void OnStateExit()

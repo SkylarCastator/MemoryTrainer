@@ -6,8 +6,11 @@ public class MemoryTrainerStateMachine : MonoBehaviour {
 
     private StateBase currentState;
     public MainMenuComponent mainMenuComponent;
+    public string numberList { private set; get;}
+    private int playerLevel = 0;
+    private float trainingTimerLength;
 
-	void Start ()
+    void Start ()
     {
         SetState(new PregameState(this));
 	}
@@ -23,5 +26,34 @@ public class MemoryTrainerStateMachine : MonoBehaviour {
     public void SetState(StateBase state)
     {
         currentState = state;
+    }
+
+    public void ChangeUserLevel(int levelChange)
+    {
+        playerLevel += levelChange;
+        mainMenuComponent.SetLevelText(playerLevel);
+    }
+
+    public void GenerateRandomList()
+    {
+        for (int i = 0; i < (playerLevel + 1); i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                int randomValue = Random.Range(0, 99);
+                if (randomValue == 0)
+                {
+                    numberList += "00";
+                }
+                else
+                {
+                    numberList += (randomValue.ToString() + "");
+                }
+            }
+
+            numberList += " ";
+        }
+
+        mainMenuComponent.SetStudyContentText(numberList);
     }
 }

@@ -1614,7 +1614,7 @@ MonoBehaviour:
   mainMenuObject: {fileID: 1078345567}
   trainingSlideObject: {fileID: 412573003}
   resultsMenuObject: {fileID: 1520482535}
-  testMenuObject: {fileID: 0}
+  testMenuObject: {fileID: 119184712}
 --- !u!1 &533247126
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,7 +4165,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1849683764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 517062104}
+        m_MethodName: TestButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1849683764
@@ -4629,7 +4640,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1948119366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 517062104}
+        m_MethodName: SubmitButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1948119366

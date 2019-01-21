@@ -7,6 +7,9 @@ public class StudyState : StateBase
     
     public StudyState(MemoryTrainerStateMachine stateMachine) : base(stateMachine)
     {
+        stateMachine.trainingSlideTimer = 0;
+        stateMachine.testSlideTimer = 0;
+
         stateMachine.mainMenuComponent.EnableTrainingSlideScreen();
         stateMachine.GenerateRandomList();
     }

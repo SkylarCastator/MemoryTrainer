@@ -75,6 +75,16 @@ public class MainMenuComponent : MonoBehaviour
         stateMachine.SetState(new StudyState(stateMachine));
     }
 
+    public void TestButtonPressed()
+    {
+        stateMachine.SetState(new TestState(stateMachine));
+    }
+
+    public void SubmitButtonPressed()
+    {
+        stateMachine.SetState(new ResultState(stateMachine));
+    }
+
     public void SetLevelText(int level)
     {
         foreach (Text text in levelText)

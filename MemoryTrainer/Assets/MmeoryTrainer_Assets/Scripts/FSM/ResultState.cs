@@ -6,7 +6,7 @@ public class ResultState : StateBase
 {
     public ResultState(MemoryTrainerStateMachine stateMachine) : base(stateMachine)
     {
-
+        stateMachine.mainMenuComponent.EnableResultsScreen();
     }
 
     public override void OnStateEnter()

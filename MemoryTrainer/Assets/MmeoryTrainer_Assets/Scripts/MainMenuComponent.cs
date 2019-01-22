@@ -11,6 +11,9 @@ public class MainMenuComponent : MonoBehaviour
     public Text[] testTimerText;
     public Text[] studyText;
     public Text[] levelText;
+    public Text userSubmittedText;
+    public Text playerScore;
+    public InputField submitInputField;
     public GameObject splashScreenObject;
     public GameObject mainMenuObject;
     public GameObject trainingSlideObject;
@@ -103,6 +106,18 @@ public class MainMenuComponent : MonoBehaviour
     public void ExitButtonPressed()
     {
         stateMachine.SetState(new MainMenuState(stateMachine));
+    }
+
+    public void InputFieldChanged()
+    {
+        string content = submitInputField.text;
+        userSubmittedText.text = content;
+        stateMachine.UpdateUserSubmittedString(content);
+    }
+
+    public void UpdatePlayerScore(float score)
+    {
+        playerScore.text = ((int)score).ToString();
     }
 
     public void SetLevelText(int level)

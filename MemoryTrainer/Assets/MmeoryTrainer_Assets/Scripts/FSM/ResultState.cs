@@ -7,6 +7,8 @@ public class ResultState : StateBase
     public ResultState(MemoryTrainerStateMachine stateMachine) : base(stateMachine)
     {
         stateMachine.mainMenuComponent.EnableResultsScreen();
+        stateMachine.mainMenuComponent.submitInputField.text = "";
+        stateMachine.ScoreTestVerseStudy();
     }
 
     public override void OnStateEnter()
